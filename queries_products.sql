@@ -19,6 +19,9 @@ SELECT name FROM products;
 -- Display all the names and prices of the products
 SELECT name, price FROM products;
 
+-- Added a blender to the table
+INSERT INTO products (name, price, can_be_returned)
+    VALUES ('blender', 54.99, false);
 
 
 
