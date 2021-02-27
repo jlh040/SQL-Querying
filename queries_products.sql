@@ -13,7 +13,8 @@ INSERT INTO products (name, price, can_be_returned)
 -- Display all of the rows and columns in the table
 SELECT * FROM products;
 
-
+-- Display all of the names of the products
+SELECT name FROM products;
 
 
 
