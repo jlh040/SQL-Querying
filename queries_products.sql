@@ -16,6 +16,9 @@ SELECT * FROM products;
 -- Display all of the names of the products
 SELECT name FROM products;
 
+-- Display all the names and prices of the products
+SELECT name, price FROM products;
+
 
 
 
