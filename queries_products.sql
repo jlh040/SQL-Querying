@@ -10,6 +10,11 @@ INSERT INTO products (name, price, can_be_returned)
 INSERT INTO products (name, price, can_be_returned)
     VALUES ('table', 124.00, false);
 
+-- Display all of the rows and columns in the table
+SELECT * FROM products;
+
+
+
 
 
 
