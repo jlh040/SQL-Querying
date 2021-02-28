@@ -30,3 +30,6 @@ SELECT * FROM analytics WHERE price BETWEEN 0.10 AND 1.00 ORDER BY reviews desc 
 
 -- Find the most out of date app
 SELECT app_name FROM analytics ORDER BY last_updated LIMIT 1;
+
+-- Find the most expensive app
+SELECT app_name FROM analytics WHERE price = (SELECT MAX(price) FROM analytics);
