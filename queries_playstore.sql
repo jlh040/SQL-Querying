@@ -27,3 +27,6 @@ SELECT app_name FROM analytics WHERE rating < 3 AND reviews >= 10000;
 
 -- Find the top 10 most reviewed apps that cost between 10 cents and a dollar
 SELECT * FROM analytics WHERE price BETWEEN 0.10 AND 1.00 ORDER BY reviews desc LIMIT 10;
+
+-- Find the most out of date app
+SELECT app_name FROM analytics ORDER BY last_updated LIMIT 1;
