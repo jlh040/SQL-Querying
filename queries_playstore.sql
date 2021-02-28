@@ -36,3 +36,6 @@ SELECT app_name FROM analytics WHERE price = (SELECT MAX(price) FROM analytics);
 
 -- Count all the reviews in the Google Play Store
 SELECT SUM(reviews) FROM analytics;
+
+-- Display all categories that have more than 300 apps
+SELECT category, COUNT(*) FROM analytics GROUP BY category HAVING COUNT(*) > 300;
