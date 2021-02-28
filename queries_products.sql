@@ -35,6 +35,8 @@ SELECT * FROM products WHERE price BETWEEN 22.50 AND 99.99;
 -- Take 20 off of every product in the table
 UPDATE products SET price = price - 20;
 
+-- There's a sale! All products that are less than 25 have sold out!
+DELETE FROM products WHERE price < 25;
 
 
 
