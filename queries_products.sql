@@ -26,6 +26,9 @@ INSERT INTO products (name, price, can_be_returned)
 -- Select only the products that can be returned
 SELECT * FROM products WHERE can_be_returned = true;
 
+-- Select only the products that have a price less than 44.00
+SELECT * FROM products WHERE price < 44;
+
 
 
 
