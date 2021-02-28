@@ -29,6 +29,8 @@ SELECT * FROM products WHERE can_be_returned = true;
 -- Select only the products that have a price less than 44.00
 SELECT * FROM products WHERE price < 44;
 
+-- Select products that have a price between 22.50 and 99.99;
+SELECT * FROM products WHERE price BETWEEN 22.50 AND 99.99;
 
 
 
