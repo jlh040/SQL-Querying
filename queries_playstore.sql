@@ -6,3 +6,6 @@ SELECT id, app_name FROM analytics WHERE last_updated = '2018-08-01';
 
 -- Find the number of apps that are in each category
 SELECT category, COUNT(*) FROM analytics GROUP BY category;
+
+-- Find the top 5 most reviewed apps and the number of reviews for each
+SELECT app_name, reviews FROM analytics ORDER BY reviews DESC LIMIT 5;
