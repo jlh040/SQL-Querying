@@ -24,3 +24,6 @@ SELECT * FROM analytics WHERE min_installs <= 50 AND rating IS NOT NULL ORDER BY
 
 -- Find the name of all apps that are rated less than 3 with atleast 10000 reviews
 SELECT app_name FROM analytics WHERE rating < 3 AND reviews >= 10000;
+
+-- Find the top 10 most reviewed apps that cost between 10 cents and a dollar
+SELECT * FROM analytics WHERE price BETWEEN 0.10 AND 1.00 ORDER BY reviews desc LIMIT 10;
