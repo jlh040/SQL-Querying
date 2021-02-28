@@ -23,6 +23,9 @@ SELECT name, price FROM products;
 INSERT INTO products (name, price, can_be_returned)
     VALUES ('blender', 54.99, false);
 
+-- Select only the products that can be returned
+SELECT * FROM products WHERE can_be_returned = true;
+
 
 
 
