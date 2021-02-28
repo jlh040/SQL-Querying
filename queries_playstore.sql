@@ -12,3 +12,6 @@ SELECT app_name, reviews FROM analytics ORDER BY reviews DESC LIMIT 5;
 
 -- Find the app that has the most reviews with a rating that is atleast 4.8
 SELECT app_name FROM analytics WHERE rating >= 4.8 ORDER BY reviews DESC LIMIT 1;
+
+-- Find the average rating for each category ordered by the highest rated to lowest rated
+SELECT category, AVG(rating) AS avg_rating FROM analytics GROUP BY category ORDER BY avg_rating DESC;
