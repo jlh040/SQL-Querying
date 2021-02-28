@@ -10,7 +10,7 @@ SELECT category, COUNT(*) FROM analytics GROUP BY category;
 -- Find the top 5 most reviewed apps and the number of reviews for each
 SELECT app_name, reviews FROM analytics ORDER BY reviews DESC LIMIT 5;
 
--- Find the app that has the most reviews with a rating that is atleast 4.8
+-- Find the app that has the most reviews with a rating that is at least 4.8
 SELECT app_name FROM analytics WHERE rating >= 4.8 ORDER BY reviews DESC LIMIT 1;
 
 -- Find the average rating for each category ordered by the highest rated to lowest rated
@@ -22,7 +22,7 @@ SELECT app_name, price, rating FROM analytics WHERE rating < 3 ORDER BY price DE
 -- Find all apps with a min install not exceeding 50 and that have a rating. Also, order them by highest rated.
 SELECT * FROM analytics WHERE min_installs <= 50 AND rating IS NOT NULL ORDER BY rating DESC;
 
--- Find the name of all apps that are rated less than 3 with atleast 10000 reviews
+-- Find the name of all apps that are rated less than 3 with at least 10000 reviews
 SELECT app_name FROM analytics WHERE rating < 3 AND reviews >= 10000;
 
 -- Find the top 10 most reviewed apps that cost between 10 cents and a dollar
@@ -39,3 +39,11 @@ SELECT SUM(reviews) FROM analytics;
 
 -- Display all categories that have more than 300 apps
 SELECT category, COUNT(*) FROM analytics GROUP BY category HAVING COUNT(*) > 300;
+
+-- Find the app that has the highest proportion of min_installs to reviews among apps that have been downloaded
+-- at least 100000 times
+SELECT app_name, reviews, min_installs, min_installs/reviews AS min_installs_to_reviews 
+FROM analytics 
+WHERE min_installs >= 100000 
+ORDER BY min_installs_to_reviews 
+DESC LIMIT 1;
