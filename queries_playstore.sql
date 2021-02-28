@@ -18,3 +18,6 @@ SELECT category, AVG(rating) AS avg_rating FROM analytics GROUP BY category ORDE
 
 -- Find the name, price, and rating of the most expensive app with a rating less than 3
 SELECT app_name, price, rating FROM analytics WHERE rating < 3 ORDER BY price DESC LIMIT 1;
+
+-- Find all apps with a min install not exceeding 50 and that have a rating. Also, order them by highest rated.
+SELECT * FROM analytics WHERE min_installs <= 50 AND rating IS NOT NULL ORDER BY rating DESC;
