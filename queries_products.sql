@@ -38,5 +38,8 @@ UPDATE products SET price = price - 20;
 -- There's a sale! All products that are less than 25 have sold out!
 DELETE FROM products WHERE price < 25;
 
+-- The sale is over, so we return the products to their original price
+UPDATE products SET price = price + 20;
+
 
 
