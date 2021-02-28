@@ -33,3 +33,6 @@ SELECT app_name FROM analytics ORDER BY last_updated LIMIT 1;
 
 -- Find the most expensive app
 SELECT app_name FROM analytics WHERE price = (SELECT MAX(price) FROM analytics);
+
+-- Count all the reviews in the Google Play Store
+SELECT SUM(reviews) FROM analytics;
