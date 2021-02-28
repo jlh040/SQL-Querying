@@ -41,5 +41,6 @@ DELETE FROM products WHERE price < 25;
 -- The sale is over, so we return the products to their original price
 UPDATE products SET price = price + 20;
 
-
+-- Update the products such that all of them are returnable
+UPDATE products SET can_be_returned = true;
 
